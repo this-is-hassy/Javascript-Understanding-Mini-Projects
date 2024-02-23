@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD 'li element in ul' Via JS</title>
+</head>
+<body style="background-color: #212121; color: #fff; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; display: flex; align-items: center; height : 100vh; justify-content: center;">
+    <h1 style="padding-right: 32px;">CRUD 'li element in ul' Via JS</h1>
+    <ul class="language" style="background-color: orange; padding: 30px; border-radius: 12px; font-size: xx-large; padding-top: 20px; padding-bottom: 20px; padding-left: 40px; padding-right: 20px;">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // Add : li , first method
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("php")
+    addLanguage("C++")
+
+     
+
+    // Add : li , second method 
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+    addOptiLanguage('JAVA')
+
+
+    //Edit : li , first method
+    const secondLang = document.querySelector("li:nth-child(3)")
+    console.log(secondLang);
+    //secondLang.innerHTML = "ruby"
+    const newli = document.createElement('li')
+    newli.textContent = "ruby"
+    secondLang.replaceWith(newli)
+
+
+    //Edit : li , second method
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+
+    //Remove : li 
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
