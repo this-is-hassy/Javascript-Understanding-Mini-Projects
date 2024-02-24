@@ -18,11 +18,11 @@ form.addEventListener("submit", function (e) {
     //show the result
 
     if (bmi <= 18.6) {
-      results.innerHTML = `<span>You're under weight${bmi}</span>`;
+      results.innerHTML = `<span>You're under weight :S ${bmi}</span>`;
     } else if (bmi > 18.6 && bmi <= 24.9) {
-      results.innerHTML = `<span>You're in normal range${bmi}</span>`;
+      results.innerHTML = `<span>You're in normal range : ${bmi}</span>`;
     } else {
-      results.innerHTML = `<span>You're overweight${bmi}</span>`;
+      results.innerHTML = `<span>You're overweight : ${bmi}</span>`;
     }
   }
 });

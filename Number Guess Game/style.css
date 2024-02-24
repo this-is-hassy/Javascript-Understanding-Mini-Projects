@@ -1,0 +1,59 @@
+.guessSubmit {
+  width: 140px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(to left,rgb(230, 35, 0),rgb(255, 174, 0));
+  letter-spacing: 0.7px;
+}
+
+.guessSubmit:hover .arrow {
+  animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.guessSubmit:active {
+  transform: scale(0.97);
+}
+
+
+
+
+
+
+.guessField {
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #e8e8e8;
+  box-shadow: 1px 1px 3px #c5c5c5,
+     -1px -1px 3px #ffffff;
+  transition: 0.3s;
+ }
+ 
+ .guessField:focus {
+  outline-color: #e8e8e8;
+  background: #e8e8e8;
+  box-shadow: inset 20px 20px 60px #c5c5c5,
+     inset -20px -20px 60px #ffffff;
+  transition: 0.3s;
+ }
